@@ -140,10 +140,10 @@ export default function Home() {
           <p className="mt-6 text-neutral-700">
             Email:{" "}
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:apradhan5@horizon.csueastbay.edu"
               className="text-blue-600 hover:text-blue-700"
             >
-              your.email@example.com
+              apradhan5@horizon.csueastbay.edu
             </a>
           </p>
         </div>

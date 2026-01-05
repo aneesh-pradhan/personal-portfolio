@@ -1,0 +1,43 @@
+# Building a USB HID Dance Pad with the Raspberry Pi Pico
+
+This post documents the design and implementation of a USB HID
+dance pad using a Raspberry Pi Pico and force-sensitive resistors.
+The focus is on reliable input handling under hardware constraints.
+
+---
+
+## System Overview
+
+The system consists of a Raspberry Pi Pico configured as a USB
+keyboard device, with multiple force-sensitive resistors connected
+to GPIO pins.
+
+Key constraints:
+- Real-time input responsiveness
+- Signal noise from analog sensors
+- USB HID timing requirements
+
+---
+
+## GPIO Input Handling
+
+Each sensor is sampled and debounced in software to ensure
+consistent activation without false triggers.
+
+The debouncing logic was implemented to balance responsiveness
+with stability.
+
+---
+
+## USB HID Emulation
+
+The Pico presents itself as a standard USB keyboard, allowing
+the device to work without custom drivers.
+
+---
+
+## Lessons Learned
+
+This project reinforced the importance of understanding both
+hardware behavior and software timing when designing embedded
+input systems.
